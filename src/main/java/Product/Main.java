@@ -13,6 +13,13 @@ public class Main {
         Order order = new Order();
         order.addProduct(product);
         System.out.println(product);
+        Integer productsCount = 3_362_000;
+
+        Integer productsCountCopy = productsCount;
+
+        productsCount = productsCount - 362_000;
+
+        System.out.println(productsCountCopy);
 
     }
 }

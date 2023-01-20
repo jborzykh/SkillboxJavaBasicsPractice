@@ -1,29 +1,45 @@
 public class Basket {
+
     private String items = "";
     private int totalPrice = 0;
     private int limit;
 
+//    private static int timeout = getTimeout();
+//
+//    private static int getTimeout(int timeout) {
+//        int secondsInHour = 3600;
+//        int hoursInDay = 24;
+//        int daysInWeek = 7;
+//        timeout = secondsInHour * hoursInDay * daysInWeek;
+//        return timeout;
+//    }
+
     // 4.6 создание контстуктора с limit
 
-    public Basket(){
+    public Basket() {
+
         items = "Shopping list: ";
         this.limit = 1000;
     }
-    public Basket(String items, int totalPrice){
+
+
+    public Basket(String items, int totalPrice) {
         this();
         this.items = this.items + items;
         this.totalPrice = totalPrice;
     }
-    public Basket (int limit){
+
+    public Basket(int limit) {
         this(); //чтобы повторно не писать   items = "Shopping list: ";
         // вызываем из предыдущего конструктора без параметров
 
         this.limit = limit;
     }
 
+
     //4.5 классы и объекты, убрали main в отдельный файл, убрали static у всех методов
 
-    public  void add(String name, int price) {
+    public void add(String name, int price) {
         //код из 4.5
 //        if(contains(name)){
 //            return;
@@ -39,11 +55,11 @@ public class Basket {
 
     // 4.6 перегрузка методов
 
-    public void add (String name, int price, int count){
-        if(contains(name)){
+    public void add(String name, int price, int count) {
+        if (contains(name)) {
             return;
         }
-        if (totalPrice + count * price > limit){
+        if (totalPrice + count * price > limit) {
             return;
         }
         items = items + "\n" + name + " " + count + " - " + price;
@@ -57,13 +73,14 @@ public class Basket {
         items = "";
         totalPrice = 0;
     }
+
     //возвращаем стоимость всех товаров в корзине
-    public int getTotalPrice(){
+    public int getTotalPrice() {
         return totalPrice;
     }
 
     //проверяем есть ли в корзине определенный товар
-    public boolean contains (String name){
+    public boolean contains(String name) {
         return (items.contains(name));
     }
 

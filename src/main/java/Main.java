@@ -11,6 +11,7 @@ public class Main {
 //        System.out.println(getTotalPrice());
 //        print("");
         // создаем новую корзину
+        Basket basket = new Basket();
         Basket vasyaBasket = new Basket();
         vasyaBasket.add("milk", 50);
         vasyaBasket.add("cola", 100);
@@ -24,6 +25,8 @@ public class Main {
 
         Basket mashaBasket = new Basket("chair", 5000);
         mashaBasket.print("Masha Basket: ");
+
+
 
     }
 }
