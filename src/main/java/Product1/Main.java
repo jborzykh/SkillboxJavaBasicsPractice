@@ -1,4 +1,4 @@
-package Product;
+package Product1;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class Main {
 
         Product product = new Product("bread", 56);
         Order order = new Order();
-        order.addProduct(product);
+       // order.addProduct(product);
         System.out.println(product);
         Integer productsCount = 3_362_000;
 

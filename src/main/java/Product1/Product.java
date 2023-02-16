@@ -1,4 +1,4 @@
-package Product;
+package Product1;
 
 // создание POJO class
 

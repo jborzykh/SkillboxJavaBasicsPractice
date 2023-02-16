@@ -1,4 +1,4 @@
-package Product;
+package Product1;
 
 public class Order {
     public void addProduct(Product product){
